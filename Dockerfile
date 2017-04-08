@@ -3,6 +3,7 @@ MAINTAINER Adam Dodman <adam.dodman@gmx.com>
 
 ENV UID=787 UNAME=plex GID=990 GNAME=media
 ADD start_pms.patch /tmp/start_pms.patch
+ADD start.sh /start.sh
 
 WORKDIR /tmp
 
@@ -24,10 +25,12 @@ RUN addgroup -g $GID $GNAME \
  && cd /tmp \
  && sed -i "s|<destdir>|$DESTDIR|" usr/sbin/start_pms \
 
+ && chmod +x /start.sh \
+
  && mv usr/sbin/start_pms $DESTDIR/ \
  && mv usr/lib/plexmediaserver $DESTDIR/plex-media-server \
 
- && apk del --no-cache xz binutils patchelf file \
+ && apk del --no-cache xz binutils file \
  && rm -rf /tmp/*
 
 
@@ -35,4 +38,4 @@ USER plex
 
 WORKDIR /glibc
 
-CMD ["/glibc/start_pms"]
+CMD ["/start.sh"]
