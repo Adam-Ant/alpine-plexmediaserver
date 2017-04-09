@@ -30,7 +30,7 @@ RUN addgroup -g $GID $GNAME \
  && mv usr/sbin/start_pms $DESTDIR/ \
  && mv usr/lib/plexmediaserver $DESTDIR/plex-media-server \
 
- && apk del --no-cache xz binutils file \
+ && apk del --no-cache xz binutils \
  && rm -rf /tmp/*
 
 
