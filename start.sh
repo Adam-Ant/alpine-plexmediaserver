@@ -1,5 +1,4 @@
 #!/bin/sh -e
-set -x
 if [ -f /config/Plex\ Media\ Server/plexmediaserver.pid ] 
 then 
   echo "Removing old PID file"
