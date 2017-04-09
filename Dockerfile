@@ -1,7 +1,7 @@
 FROM adamant/alpine-glibc
 MAINTAINER Adam Dodman <adam.dodman@gmx.com>
 
-ENV UID=787 UNAME=plex GID=990 GNAME=media
+ENV UID=900 UNAME=plex GID=900 GNAME=media
 ADD start_pms.patch /tmp/start_pms.patch
 ADD start.sh /start.sh
 
