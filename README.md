@@ -1,2 +1,2 @@
-# Depreceated
-## Due to continuing issues with alpines lack of support of glibc, this repo has been depreceated for a busbox based one, which is [here](https://github.com/Adam-Ant/docker-plex-tiny). It is smaller and has more features than this one!
+# Deprecated - Try here: [Adam-Ant/docker-plex-tiny](https://github.com/Adam-Ant/docker-plex-tiny)
+## Due to continuing issues with Alpine's lack of support of glibc, this project has been deprecated in favour of a smaller and more feature rich image [AdamAnt/plexmediaserver](https://github.com/Adam-Ant/docker-plex-tiny) based on [AdamAnt/busybox](https://github.com/Adam-Ant/docker-busybox-base) which is specifically built from source to be as small and clutter-free as possible!
